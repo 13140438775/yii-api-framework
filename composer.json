@@ -1,0 +1,17 @@
+{
+  "name":"heyafei/yii2",
+  "description": "yii2",
+  "type":"project",
+  "license": "Apache-2.0",
+  "keywords": [
+    "yii2"
+  ],
+  "require": {
+    "yiisoft/yii2": "~2.0.14",
+    "yiisoft/yii2-redis": "~2.0.0",
+    "yiisoft/yii2-swiftmailer": "^2.1",
+    "yiisoft/yii2-httpclient": "~2.0.0",
+    "ezyang/htmlpurifier":"~4.9.3",
+    "sizeg/yii2-jwt": "^1.0"
+  }
+}
