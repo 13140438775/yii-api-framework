@@ -1,0 +1,23 @@
+{
+    "swagger": "2.0",
+    "paths": {
+        "/user": {
+            "get": {
+                "tags": [
+                    "user"
+                ],
+                "summary": "\u7528\u6237\u9996\u9875",
+                "description": "\u8fd4\u56deinfo\u4fe1\u606f",
+                "parameters": [
+                    {}
+                ],
+                "responses": {
+                    "200": {
+                        "description": " success"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}

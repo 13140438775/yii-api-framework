@@ -12,6 +12,7 @@
     "yiisoft/yii2-swiftmailer": "^2.1",
     "yiisoft/yii2-httpclient": "~2.0.0",
     "ezyang/htmlpurifier":"~4.9.3",
-    "sizeg/yii2-jwt": "^1.0"
+    "sizeg/yii2-jwt": "^1.0",
+    "light/yii2-swagger": "^1.0"
   }
 }

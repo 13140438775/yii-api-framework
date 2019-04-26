@@ -36,15 +36,20 @@ class UserController extends BaseController {
             'token' => (string)\Yii::$app->jwt->issue(['user_id' => 1])
         ];
     }
-    
+
     /**
-     * 列表
-     * GET /users
+     * @SWG\GET(path="/user",
+     *     tags={"user"},
+     *     summary="用户首页",
+     *     description="返回info信息",
+     *     @SWG\Parameter(
+     *     ),
+     *     @SWG\Response(
+     *         response = 200,
+     *         description = " success"
+     *     )
+     * )
      *
-     * @return array
-     * @CreateTime 2018/3/19 10:19:07
-     * @Author     : sunforcherry@gmail.com
-     * @throws
      */
     public function actionIndex() {
         return [

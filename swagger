@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+    // php程序位置
+    $php = 'php';
+    // 项目路径
+    $dir = __DIR__;
+    // swagger路径
+    $swagger = $dir. DIRECTORY_SEPARATOR  . "vendor". DIRECTORY_SEPARATOR ."zircote". DIRECTORY_SEPARATOR ."swagger-php". DIRECTORY_SEPARATOR ."bin". DIRECTORY_SEPARATOR ."swagger";
+    // 接口文件夹
+    $controller = $dir. DIRECTORY_SEPARATOR ."Controllers";
+
+    // 生成swagger文件
+    $target = $dir. DIRECTORY_SEPARATOR ."web";
+    exec($php . " " . $swagger . " " . $controller . " -o " . $target);
+
+//    // 生成swagger-ui2.0的group文件
+//    $data = [
+//        [
+//            "name" => '项目默认接口',
+//            "url" => '../swagger.json',
+//            "swaggerVersion" => '3.0',
+//            "location" => "../swagger.json"
+//        ]
+//    ];
+//    $data = json_encode($data, JSON_UNESCAPED_UNICODE);
+//    file_put_contents($target. DIRECTORY_SEPARATOR ."swagger-group.json", $data);
