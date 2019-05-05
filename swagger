@@ -13,14 +13,14 @@
     $target = $dir. DIRECTORY_SEPARATOR ."web";
     exec($php . " " . $swagger . " " . $controller . " -o " . $target);
 
-//    // 生成swagger-ui2.0的group文件
-//    $data = [
-//        [
-//            "name" => '项目默认接口',
-//            "url" => '../swagger.json',
-//            "swaggerVersion" => '3.0',
-//            "location" => "../swagger.json"
-//        ]
-//    ];
-//    $data = json_encode($data, JSON_UNESCAPED_UNICODE);
-//    file_put_contents($target. DIRECTORY_SEPARATOR ."swagger-group.json", $data);
+    // 生成swagger-ui2.0的group文件
+    $data = [
+        [
+            "name" => '项目默认接口',
+            "url" => '../swagger.json',
+            "swaggerVersion" => '3.0',
+            "location" => "../swagger.json"
+        ]
+    ];
+    $data = json_encode($data, JSON_UNESCAPED_UNICODE);
+    file_put_contents($target. DIRECTORY_SEPARATOR ."swagger-group.json", $data);
