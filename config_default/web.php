@@ -2,7 +2,7 @@
 /**
  * yii2 restful config
  */
-
+require_once __DIR__ . '/bootstrap.php';
 $db     = include_once(__DIR__ . '/db.php');
 $redis  = include_once(__DIR__ . '/redis.php');
 $rules  = include_once(__DIR__ . '/../params/rules.php');
@@ -27,6 +27,18 @@ $config = [
             'as response'      => [
                 'class'    => \app\behaviors\ExceptionResponse::class,
             ]
+        ],
+        'sentry' => [
+            'class' => \mito\sentry\Component::class,
+            'enabled' => true, // 设置为 false 以跳过收集错误，即禁用 Sentry，默认：true
+            'dsn' => 'https://54bdc1f43a464f53808b700a3e52bb94@sentry.io/1452969', // 私有 DSN
+            'environment' => 'loc', // 环境，development：开发环境；production：生产环境，默认：production
+            'jsNotifier' => false, // 收集 JS 错误，默认：false
+            'jsOptions' => [ // raven-js 配置参数
+                'whitelistUrls' => [ // 收集JS错误的网址
+                    'http://api.gitlab-php-yii2-app-advanced-cmc.localhost',
+                ],
+            ],
         ],
         'email'       => [
             'class'         => \app\components\email\Email::class,
@@ -100,6 +112,10 @@ $config = [
                         'info',
                         'warning'
                     ],
+                ],
+                'sentry' => [
+                    'class' => \mito\sentry\Target::class,
+                    'levels' => ['error', 'warning'],
                 ],
             ],
         ],
