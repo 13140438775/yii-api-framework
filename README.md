@@ -1,7 +1,7 @@
 # Framework Instructions
 
 ## 框架介绍
-糅合Swoole及YII2，借用Swoole的高性能及YII2的成熟组件，产出高性能真快API Framework，支持普通请求方式及restful api，默认restful。给各位小伙伴点赞!
+
 
 **Framework**：Swoole+YII2 => HttpServer
 
@@ -161,7 +161,3 @@ Swoole+YII2 benchmark 4C8G8worker
 #### Nginx+PHP-FPM+YII2
 >
 >Requests per second:   150.64  
-
-
-## 鸣谢
-@Swoole @YII @彭彪 @方星 
