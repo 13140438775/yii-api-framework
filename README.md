@@ -161,3 +161,16 @@ Swoole+YII2 benchmark 4C8G8worker
 #### Nginx+PHP-FPM+YII2
 >
 >Requests per second:   150.64  
+##### 配置swagger API文档
+composer require light/yii2-swagger
+下载美化的Swagger-Bootstrap-UI:https://github.com/xiaoymin/Swagger-Bootstrap-UI
+运行脚本根目录下swagger文件：PHP swagger
+
+##### 配置sentry 日志报错记录
+composer require mito/yii2-sentry
+在sentry官网注册自己的账号
+参考文献：
+本地可测试：http://www.shuijingwanwq.com/2018/08/24/2861/
+搭建自己的sentry服务器：https://www.cnblogs.com/scharfsinnig/p/7467958.html
+
+
